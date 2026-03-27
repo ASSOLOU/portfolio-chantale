@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
   { to: "/", label: "Accueil" },
+  { to: "/competences", label: "Compétences" },
   { to: "/projets", label: "Projets" },
   { to: "/contact", label: "Contact" },
 ];
@@ -53,11 +54,21 @@ export default function Navbar({ theme, onToggleTheme }) {
           </div>
 
           <div className="flex items-center gap-3">
+            <a
+              href="/cv-chantale-assolou.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="hidden rounded-full border border-[var(--color-border)] bg-[var(--color-surface-alt)] px-4 py-2 text-sm font-medium text-[var(--color-text)] transition duration-300 hover:border-[var(--color-accent)] hover:bg-[var(--color-surface-strong)] md:inline-flex"
+            >
+              Télécharger CV
+            </a>
+
             <button
               type="button"
               onClick={onToggleTheme}
               className="hidden rounded-full border border-[var(--color-border)] bg-[var(--color-surface-alt)] px-4 py-2 text-sm font-medium text-[var(--color-text)] transition duration-300 hover:bg-[var(--color-surface-strong)] md:inline-flex"
-              aria-label="Changer le theme"
+              aria-label="Changer le thème"
             >
               {theme === "light" ? "Mode sombre" : "Mode clair"}
             </button>
@@ -76,19 +87,33 @@ export default function Navbar({ theme, onToggleTheme }) {
               aria-label="Ouvrir le menu"
               aria-expanded={isOpen}
             >
-              <span className="text-xl leading-none">{isOpen ? "X" : "="}</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em]">
+                {isOpen ? "Fermer" : "Menu"}
+              </span>
             </button>
           </div>
         </div>
 
         {isOpen ? (
           <div className="mt-4 space-y-2 border-t border-[var(--color-border)] pt-4 md:hidden">
+            <a
+              href="/cv-chantale-assolou.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="block w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-alt)] px-4 py-3 text-left text-sm font-medium text-[var(--color-text)] transition duration-300 hover:bg-[var(--color-surface-strong)]"
+            >
+              Télécharger mon CV
+            </a>
+
             <button
               type="button"
               onClick={onToggleTheme}
               className="block w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-alt)] px-4 py-3 text-left text-sm font-medium text-[var(--color-text)] transition duration-300 hover:bg-[var(--color-surface-strong)]"
             >
-              {theme === "light" ? "Passer en mode sombre" : "Passer en mode clair"}
+              {theme === "light"
+                ? "Passer en mode sombre"
+                : "Passer en mode clair"}
             </button>
 
             {navItems.map((item) => (

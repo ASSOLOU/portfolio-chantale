@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --nav-color: #4070F4;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+}
+
+
+.lieux-container {
+    text-align: center;
+    padding: 2em;
+}
+
+.lieux-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.lieu-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.lieu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.lieu-card h2 {
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+.lieu-card p {
+    font-size: 1em;
+    margin: 0.5em;
+    color: #555;
+}
+.lieu-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}

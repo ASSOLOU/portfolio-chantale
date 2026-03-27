@@ -17,6 +17,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+/tmp
+/tmp_docx_extract
 
 npm-debug.log*
 yarn-debug.log*

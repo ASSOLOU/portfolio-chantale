@@ -1,0 +1,20 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="1200" fill="#1D1514"/>
+<circle cx="340" cy="290" r="250" fill="#FF8E7A"/>
+<circle cx="1240" cy="280" r="220" fill="#F3A65F"/>
+<circle cx="920" cy="760" r="360" fill="#8E3D35"/>
+<rect x="170" y="180" width="1260" height="840" rx="52" fill="url(#paint0_linear)"/>
+<rect x="260" y="270" width="430" height="560" rx="36" fill="#F6D6C8"/>
+<rect x="730" y="320" width="610" height="120" rx="24" fill="#FFF4EC"/>
+<rect x="730" y="480" width="450" height="56" rx="18" fill="#FFD0C4"/>
+<rect x="730" y="568" width="360" height="56" rx="18" fill="#F4B79D"/>
+<rect x="730" y="700" width="250" height="88" rx="44" fill="#201717"/>
+<text x="730" y="396" fill="#201717" font-size="62" font-family="Arial, sans-serif" font-weight="700">Glow Beauty</text>
+<text x="730" y="770" fill="#FFF4EC" font-size="34" font-family="Arial, sans-serif" font-weight="700">Collection signature</text>
+<defs>
+<linearGradient id="paint0_linear" x1="170" y1="180" x2="1430" y2="1020" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4D2421"/>
+<stop offset="1" stop-color="#A24D43"/>
+</linearGradient>
+</defs>
+</svg>

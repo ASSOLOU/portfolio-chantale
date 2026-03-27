@@ -1,0 +1,10 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="900" height="900" fill="#1F232F"/>
+<circle cx="180" cy="220" r="150" fill="#FFB76B"/>
+<circle cx="710" cy="710" r="220" fill="#475878"/>
+<rect x="110" y="120" width="680" height="660" rx="42" fill="#EEF1F8"/>
+<path d="M200 450C290 340 610 340 700 450C610 560 290 560 200 450Z" fill="#1F232F"/>
+<circle cx="450" cy="450" r="96" fill="#FFB76B"/>
+<circle cx="450" cy="450" r="44" fill="#1F232F"/>
+<text x="110" y="840" fill="#EEF1F8" font-size="56" font-family="Arial, sans-serif" font-weight="700">Eye Energy</text>
+</svg>

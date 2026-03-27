@@ -1,0 +1,8 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="900" height="900" fill="#181920"/>
+<rect x="380" y="150" width="110" height="500" rx="55" fill="#111111"/>
+<path d="M440 220L600 120" stroke="#F6C580" stroke-width="18" stroke-linecap="round"/>
+<path d="M440 250L650 210" stroke="#F6C580" stroke-width="18" stroke-linecap="round"/>
+<path d="M440 280L660 320" stroke="#F6C580" stroke-width="18" stroke-linecap="round"/>
+<text x="110" y="790" fill="#FFF5E5" font-size="68" font-family="Arial, sans-serif" font-weight="700">Lash Impact</text>
+</svg>

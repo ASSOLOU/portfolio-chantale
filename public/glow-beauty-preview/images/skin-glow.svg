@@ -1,0 +1,9 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="900" height="900" fill="#7A4A38"/>
+<circle cx="690" cy="200" r="170" fill="#F0C88E"/>
+<circle cx="220" cy="710" r="210" fill="#D78E6C"/>
+<rect x="120" y="120" width="660" height="660" rx="42" fill="#FFF2E4"/>
+<rect x="330" y="180" width="240" height="470" rx="60" fill="#D7A884"/>
+<rect x="360" y="140" width="180" height="80" rx="24" fill="#F7E1CD"/>
+<text x="120" y="840" fill="#FFF2E4" font-size="56" font-family="Arial, sans-serif" font-weight="700">Skin Glow</text>
+</svg>

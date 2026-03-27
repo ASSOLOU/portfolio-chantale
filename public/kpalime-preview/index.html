@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kpalimé</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="light-theme">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href="#">KPALIME</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Lieux</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Commerce</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <button id="searchToggle" class="btn btn-outline-secondary me-2">
+              <i class="bi bi-search"></i>
+            </button>
+            <input
+              id="searchBar"
+              class="form-control me-2 d-none"
+              type="search"
+              placeholder="Rechercher..."
+              aria-label="Search"
+            />
+            <button id="themeToggle" class="btn btn-outline-secondary">
+              <i class="bi bi-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide custom-carousel"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="./images/vuedelaville.jpg" alt="Vue de la ville" />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Découvrez Kpalimé</h2>
+            <h4>
+              La perle des Plateaux togolais, une ville dynamique et pleine de charme,
+              réputée pour sa nature luxuriante, son climat agréable et sa richesse artisanale.
+            </h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./images/vue5.jpg" alt="Paysage de Kpalimé" />
+          <div class="carousel-caption d-none d-md-block">
+            <h4>
+              Explorez les paysages verdoyants, les cascades et la richesse culturelle de la région.
+            </h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./images/vue.jpg" alt="Kpalimé" />
+          <div class="carousel-caption d-none d-md-block">
+            <h4>
+              Entre tradition et modernité, cette ville chaleureuse séduit ceux qui prennent le temps de la découvrir.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="maVille">
+      <h1 id="maVilleh1">À la découverte de ma ville</h1>
+      <h3 id="maVilleh2">Trois regards, une ville pleine de vie et de beauté</h3>
+
+      <div class="row">
+        <div class="maVille-col">
+          <img src="./images/montkloto.jpg" alt="Mont Kloto" />
+          <h3>Le Mont Kloto</h3>
+          <p>
+            Depuis les hauteurs du mont Kloto, Kpalimé se dévoile sous un angle unique.
+          </p>
+        </div>
+        <div class="maVille-col">
+          <img src="./images/marche.jpg" alt="Marché central" />
+          <h3>Le marché central de Kpalimé</h3>
+          <p>
+            Coloré, animé et plein de vie, le marché central reflète la diversité culturelle de la ville.
+          </p>
+        </div>
+        <div class="maVille-col">
+          <img src="./images/centre_artisanal.jpg" alt="Centre artisanal" />
+          <h3>Centre artisanal de Kpalimé</h3>
+          <p>
+            Un lieu vivant où les artisans partagent leur savoir-faire et leur culture.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="apropos">
+      <div class="img-apropos">
+        <img src="./images/vue6.jpg" alt="Histoire de Kpalimé" />
+      </div>
+      <div>
+        <h1>Histoire de Kpalimé</h1>
+        <p id="aproposp">
+          Kpalimé, située dans la région des Plateaux au sud-ouest du Togo, est une ville marquée par la nature, la culture et les échanges.
+        </p>
+        <a href="#" class="btn">En savoir plus</a>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <h1 id="mapTitle">Localisation de Kpalimé</h1>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31571.86723653971!2d0.617553!3d6.900282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1021f7b6c7e7b7f5%3A0x8f7b7b7b7b7b7b7b!2sKpalim%C3%A9%2C%20Togo!5e0!3m2!1sfr!2sfr!4v1680000000000!5m2!1sfr!2sfr"
+          width="100%"
+          height="450"
+          style="border: 0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>À propos</h3>
+          <p>
+            Kpalimé, une ville riche en culture et en histoire, est un lieu incontournable pour les amoureux de la nature et des traditions.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h3>Liens rapides</h3>
+          <ul>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#maVilleh1">Lieux incontournables</a></li>
+            <li><a href="#mapTitle">Localisation</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <ul>
+            <li><i class="bx bx-map"></i> Kpalimé, Togo</li>
+            <li><i class="bx bx-phone"></i> +228 90 00 00 00</li>
+            <li><i class="bx bx-envelope"></i> contact@kpalime.tg</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Kpalimé. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

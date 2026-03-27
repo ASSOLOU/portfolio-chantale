@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --body-color: #E4E9F7; 
+    --nav-color: #4070F4; 
+    --side-nav: #010718; /* Co
+    --text-color: #FFF; /* Couleur du texte clair */
+    --search-bar: #F2F2F2; /* Couleur de la barre de recherche */
+    --search-text: #010718; /* Couleur du texte sombre */
+}
+
+body.dark-theme {
+    --body-color: #121212; 
+    --nav-color: #000; 
+    --text-color: #FFF; 
+    --search-bar: #333; 
+    --search-text: #FFF; 
+}
+
+body {
+    background-color: var(--body-color);
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+/* Titres en blanc en mode clair */
+body.dark-theme h1,
+body.dark-theme h3 {
+    color: #FFF; /* Couleur blanche pour les titres */
+}
+
+body.dark-theme ul li{
+    color: var(--text-color);
+}
+
+/* Navbar styling */
+.navbar {
+    position: sticky; /* Fixe le navbar en haut */
+    top: 0;
+    z-index: 1030; /* S'assure que le navbar est au-dessus du carrousel */
+    background-color: var(--nav-color); /* Couleur dynamique */
+    color: var(--text-color); /* Texte dynamique */
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 auto; /* Centrer le navbar */
+    padding: 0.5rem 1rem; /* Espacement interne */
+}
+
+body.dark-theme .navbar {
+    background-color: var(--nav-color) !important;
+}
+
+.navbar .logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e89de;
+}
+
+/* Navbar links alignment */
+.navbar .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+body.dark-theme .navbar .nav-link {
+    color: var(--text-color);
+}
+
+#searchBar {
+    max-width: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+#searchBar.d-none {
+    max-width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.maVille {
+    width: 100%; /* S'assure que la section prend toute la largeur */
+    max-width: 1200px; /* Limite la largeur maximale */
+    margin: auto; /* Centre la section */
+    text-align: center;
+    padding: 50px 20px; /* Ajoute un espacement interne */
+    overflow: hidden; /* Empêche tout débordement */
+    background-color: var(--body-color); /* Couleur de fond dynamique */
+    color: var(--text-color); /* Couleur du texte dynamique */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.maVille h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #182C64; /* Couleur du titre */
+}
+
+.maVille .row {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile */
+    gap: 20px; /* Espacement entre les colonnes */
+    justify-content: center; /* Centre les colonnes */
+    margin: 0; /* Supprime les marges inutiles */
+}
+
+.maVille-col {
+    flex: 1 1 calc(33.333% - 20px); /* 3 colonnes sur grand écran */
+    max-width: calc(33.333% - 20px);
+    background-color: #F6FAFF; /* Couleur de fond */
+    color: #182C64; /* Couleur du texte */
+    border-radius: 10px;
+    overflow: hidden; /* Empêche tout débordement interne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet esthétique */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Espacement entre les lignes */
+    box-sizing: border-box; /* Inclut les bordures et marges dans la taille */
+}
+
+
+.maVille-col:hover {
+    transform: translateY(-5px); /* Effet de survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Images dans la section maVille */
+.maVille-col img {
+    width: 100%;
+    height: 200px; /* Fixe une hauteur uniforme pour toutes les images */
+    object-fit: cover; /* Assure que l'image s'adapte bien à la hauteur */
+    border-bottom: 3px solid #E4E9F7; /* Séparation entre l'image et le texte */
+    border-radius: 10px 10px 0 0; /* Coins arrondis en haut */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transition pour l'animation */
+}
+
+.maVille-col img:hover {
+    transform: scale(1.05); /* Zoom léger sur l'image au survol */
+    filter: brightness(0.9); /* Assombrit légèrement l'image au survol */
+}
+
+.maVille-col h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #182C64; /* Couleur du texte */
+}
+
+.maVille-col p {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 15px 20px;
+    color: #182C64; /* Couleur du texte */
+}
+
+
+
+/* Section à propos */
+.apropos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petits écrans */
+    background-color: var(--body-color); /* Couleur de fond dynamique */
+    color: var(--text-color); /* Couleur du texte dynamique */
+    transition: background-color 0.3s, color 0.3s;
+    gap: 30px; /* Espacement entre l'image et le texte */
+}
+
+.apropos .img-apropos {
+    flex: 1; /* L'image occupe 1 part de l'espace */
+    max-width: 500px; /* Largeur maximale de l'image */
+    min-width: 300px; /* Largeur minimale pour éviter qu'elle devienne trop petite */
+}
+
+.apropos .img-apropos img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre esthétique */
+    object-fit: cover; /* Assure que l'image s'adapte bien à son conteneur */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+}
+
+.apropos div {
+    flex: 2; /* Le texte occupe 2 parts de l'espace */
+    max-width: 600px; /* Largeur maximale du texte */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+.apropos h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--nav-color); /* Couleur adaptée */
+}
+
+.apropos h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--nav-color); /* Couleur adaptée */
+}
+
+.apropos #aproposp {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--search-text); /* Texte adapté */
+}
+
+.apropos .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.apropos .btn:hover {
+    background-color: #3059d6; /* Couleur légèrement plus foncée */
+}
+
+
+
+/* Section Map */
+.map-section {
+    padding: 50px 20px;
+    background-color: var(--body-color); /* Couleur de fond dynamique */
+    color: var(--text-color); /* Couleur du texte dynamique */
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.map-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--nav-color); /* Couleur adaptée */
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-5px); /* Effet de survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+
+/* Global styles for responsive design */
+img, iframe {
+    max-width: 100%; /* Images et iframes fluides */
+    height: auto;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: var(--nav-color); /* Couleur dynamique */
+    color: var(--text-color); /* Texte dynamique */
+    transition: background-color 0.3s, color 0.3s;
+    padding: 50px 20px; /* Espacement interne */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petits écrans */
+    justify-content: space-between; /* Espacement entre les colonnes */
+    gap: 20px; /* Espacement entre les sections */
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centre le contenu */
+}
+
+.footer-container div {
+    flex: 1 1 calc(25% - 20px); /* 4 colonnes sur grand écran */
+    min-width: 200px; /* Largeur minimale */
+    text-align: left; /* Alignement du texte */
+    color: var(--text-color); /* Texte dynamique */
+}
+
+.footer h3 {
+    font-size: 1.5rem; /* Taille du titre */
+    margin-bottom: 15px; /* Espacement sous le titre */
+    color: var(--text-color); /* Couleur du texte */
+}
+
+.footer p,
+.footer ul {
+    font-size: 1rem; /* Taille du texte */
+    line-height: 1.6; /* Hauteur de ligne */
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Supprime les puces des listes */
+}
+
+.footer ul li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+.footer ul li i {
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    color: var(--text-color); /* Couleur des icônes */
+}
+
+.footer ul li a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: var(--text-color); /* Couleur des liens */
+    transition: color 0.3s ease; /* Transition pour l'effet au survol */
+}
+
+.footer ul li a:hover {
+    color: #f39c12; /* Couleur au survol */
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center; /* Centre les icônes */
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+.footer-social .social-icons a {
+    font-size: 1.5rem; /* Taille des icônes */
+    color: var(--text-color); /* Couleur des icônes */
+    transition: color 0.3s ease; /* Transition pour l'effet au survol */
+}
+
+.footer-social .social-icons a:hover {
+    color: #f39c12; /* Couleur au survol */
+}
+
+.footer-bottom {
+    margin-top: 30px; /* Espacement au-dessus */
+    font-size: 0.9rem; /* Taille du texte */
+    color: var(--text-color); /* Couleur du texte */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Ligne de séparation */
+    padding-top: 15px; /* Espacement interne */
+    text-align: center; /* Centre le texte */
+}
+
+
+
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .navbar .nav-item {
+        margin-bottom: 0.5rem; /* Espacement entre les liens */
+    }
+
+    .navbar .collapse {
+        background-color: #fff; /* Fond blanc pour le menu déroulant */
+        padding: 1rem;
+    }
+
+    body.dark-theme .navbar .collapse {
+        background-color: var(--nav-color); /* Fond sombre pour le menu déroulant */
+    }
+
+    .custom-carousel .carousel-inner img {
+        height: 300px; /* Ajustez la hauteur selon vos besoins */
+        object-fit: cover; /* Assure que l'image s'adapte bien à la hauteur */
+    }
+
+    .maVille-col {
+        flex: 1 1 calc(100% - 20px); /* Une seule colonne sur mobile */
+        max-width: calc(100% - 20px);
+    }
+
+    .maVille h1 {
+        font-size: 1.8rem; /* Réduction de la taille du titre */
+    }
+
+
+    .apropos {
+        flex-direction: column; /* Passe en colonne sur petits écrans */
+        text-align: center; /* Centre le texte */
+    }
+
+    .apropos .img-apropos {
+        max-width: 100%; /* L'image prend toute la largeur */
+    }
+
+    .apropos div {
+        max-width: 100%; /* Le texte prend toute la largeur */
+    }
+
+    .apropos h1 {
+        font-size: 1.8rem; /* Réduction de la taille du titre */
+    }
+
+    .apropos h3 {
+        font-size: 1.3rem; /* Réduction de la taille des sous-titres */
+    }
+
+    .apropos #aproposp {
+        font-size: 0.9rem; /* Réduction de la taille du texte */
+    }
+
+    .footer h3 {
+        font-size: 1.3rem; /* Réduction de la taille du titre */
+    }
+
+    .footer p,
+    .footer ul {
+        font-size: 0.9rem; /* Réduction de la taille du texte */
+    }
+
+    .footer-social .social-icons a {
+        font-size: 1.2rem; /* Réduction de la taille des icônes */
+    }
+}
+
+/* Custom carousel */
+.custom-carousel .carousel-inner img {
+    max-height: 500px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover; /* Assure que l'image s'adapte bien à la hauteur */
+}
